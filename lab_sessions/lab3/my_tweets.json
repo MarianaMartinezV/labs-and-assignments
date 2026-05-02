@@ -1,252 +1,252 @@
 {
     "1": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "So Conor McGregor is ALREADY the favorite leading up to the fight in December. I feel the odds will fluctuate quite a bit! #UFC #UFC194",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "2": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "I liked a @user video from @user Mike Tyson: Floyd Mayweather lost the fight in September 12",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "3": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "\"Carmen Consoli at the Teatro degli Arcimboldi in Milan! January 22, not miss out! Book your hotel at the best rate:",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "4": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "@user Sorry am rubbish at posting links. Google 'Spike's disease' +border terrier and it will come up. Ours 1st signs were at around 1.",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "5": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "Need to get myself the Muhammad Ali hoody from @user ...payday tomorrow #hmmm",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "6": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "@user Zayn is a star! he never tried to steal the spotlight, but he is like a sun, he can't be overshadowed. The public is with him!\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "7": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "\"\\\"\"\"\"No you may not kick it.\\\"\"\"\"  -Tribe Called Quest answering a text from Billy Cundiff\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "8": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "My mom heard someone say Michelle Obama on TV and she started singing 5th Harmony... Help",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "9": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "\"Picking up my car today, Big Brother is on tonight, season premiere of The League, not bad for a Wednesday\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "10": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "\"Is2g if I hear one more \"\"im not racists im just against Islam\"\" I will lunch myself into the sun\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "11": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "\"SUNDAY, JUNE 19TH is NATIONAL ICE CREAM DAY!!!  (Sorry for the short notice, but our A/C is now back up and...",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "12": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "\"Is there a decent karaoke spot in Tulsa on a Wednesday? I feel the need to do \"\"Number of the Beast\"\" by Iron Maiden in honor of @user",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "13": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "Two more days till the march to the BCS resumes! SDSU gets to experience what a top ranked defense looks like up close. #GoBroncos",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "14": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "\"Who is the 6'4\"\" guard from Yelm that dropped 44 in the Curtis jamboree Monday night?\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "15": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "Who is Kim Davis? Don't you fucking retards know that Tom Brady is playing football tomorrow and is most likely getting laid right now.",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "16": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "After what Jon Stewart did to John Cena he better show up to work on Monday.",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "17": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "Today a white boy told me nicki minaj was the best female rapper. I beg to differ. Since when do schizophrenics get recognized like that?",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "18": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "@user I'll just get it tomorrow after I see Ant-Man with or without Coffey.",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "19": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "Tomorrow I have tickets to get drunk and see Jason Aldean in Cincinnati with my bff Donna and I can't wait",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "20": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "Those who say Ahmediya is true Islam are ignorant. May Allah Pak show them the right path #AhmadiyyaIsNotIslam",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "21": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "\"OK I may regret this question, BUT...why is WBC protesting a Foo Fighters concert? And don't tell me it's a...",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "22": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "\"Murray in real trouble now, down a break in the 3rd #USOpen Looking angry and frustrated\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "23": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "@user @user also didn't Carlo build that Milan team? Or maybe Silvio did all the work and he just sat back and ate pizza",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "24": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "\"it's September 1st, I've lost all hoped relating to frank ocean, now I must rescue him bc he's been abducted by the government\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "25": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "Toujours #Mozart festival comes to Israel for the 1st time in 17 years-",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "26": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "Android 4.2 Camera app with Photo Sphere now available for Galaxy Nexus: Introduced on Monday\\u002c Android 4.2 bring...",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "27": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "David Wright Looks Good in First Rehab Start: Photo David Wright during the first inning Monday. He had comple...",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "28": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "@user I'm going to need to catch up...I only just started watching the 3rd season by accident. lol. Are the 1st 3 seasons on Netflix?",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "29": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "The sound of Sunday with Katy Perry - Roar #webradio #internetradio",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "30": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "Scott Walker scratching really deep to find some kind of data to spin to make his awful record look better",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "31": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "@user going to laidback luke next saturday going to be amaziiiiinggggaaaa! Haha",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "32": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "'Swachh Bharat' appeared on Sunday 5 at the 20th place in the Top20 of Pune's Trends: #trndnl",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "33": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "@user Yes! What I mean is that especially after Michelle Obama, the 1st Lady (or, one day, man!) plays a huge role in social issues!",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "34": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "i hope john cena comes to school on tuesday and five knuckle shuffles the fuck out of yall",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "35": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "\"I also remember this one time in 6th, when I bent down to pick my pencil up and farted, in the middle of TAKS. Dx\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "36": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "Here is your Tuesday class line up: Gentle Yoga with Elle at 9:30am Little Trees Yoga with Kathleen at 5:00pm...",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "37": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "2 Democrats in Wisconsin state senate up for recall election next Tuesday.  Hopefully the discouragement of Waukesha doesn't prevail.",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "38": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "I have to say the Pony scene from Magic Mike XXL may be some of Channing's finest dancing",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "39": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "If Messi gets injured tonight, Dallas won't exist tomorrow.",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "40": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "had great time in Barca, also made some profit which is always nice. Back to the online grind for the sunday today #vamoooos #lfg",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "41": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "\"Better value phone that Moto G 3rd generation? But Android only, people. I see you, you iTits.\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "42": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "\"So, Hastings Entertainment is playing the entire new Lenny Kravitz album. I may take my time at this place. #HECKYEA\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "43": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "How many of you believe that Andrew Breitbart very well may have been murdered?",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "44": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "@user I'll check tomorrow to see if it's on Amazon or Netflix :)",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "45": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "\"Totally worth watching Nirvana's 1st interview w/ MTV, if only for @user banter towards the end.",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "46": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "positive",
+        "text_of_tweet": "@user come to the salon. I work 12-4 on Friday bc of the holiday. Curtis said I can cut yr hair there!",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "47": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "2nd time going to Dunkin today and there closed. Like no this is not ok",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "48": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "neutral",
+        "text_of_tweet": "Have I missed the bit where someone said that Chris Evans is supposed to wear the same t-shirt every week on TFI Friday?",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "49": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "\"Somewhere in Appleland, Steve Jobs just spit his morning coffee onto his computer screen. EAH!\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     },
     "50": {
-        "sentiment_label": "",
-        "text_of_tweet": "",
-        "tweet_url": ""
+        "sentiment_label": "negative",
+        "text_of_tweet": "\"I don't even understand how Sharknado is even a thing, let alone having a 3rd movie. The SE suck, the acting sucks, and it's so dumb I laugh\"",
+        "tweet_url": "https://huggingface.co/datasets/tweet_eval"
     }
 }
