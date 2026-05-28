@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.11" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="ba-text-mining" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="lab6-text-mining" project-jdk-type="Python SDK" />
 </project>
