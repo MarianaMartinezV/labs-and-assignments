@@ -136,34 +136,25 @@ SPACY_MAP = {
 
 
 def run_system_b(test_sents_tokens):
-    """
-    TODO (partner): implement System B — a pretrained neural NER, different from
-    System A, so the two-system comparison is real.
-
-    Suggested options (pick one, or compare both):
-      - spaCy en_core_web_trf  (transformer model; pip install + spacy download)
-      - Stanza  (pip install stanza; stanza.download("en"))
-      - a different spaCy size (en_core_web_sm / md / lg)
-
-    Contract this function must satisfy:
-      INPUT : test_sents_tokens -> list of sentences, each a list of token strings
-              (already tokenised; do NOT re-tokenise, feed the given tokens in so
-               predictions stay aligned to the gold tags)
-      OUTPUT: list of sentences, each a list of BIO tags, SAME length as the input
-              sentence, using the CoNLL tag set: O / B-PER / I-PER / B-ORG / I-ORG
-              / B-LOC / I-LOC / B-MISC / I-MISC
-
-    Map the model's native entity types to the CoNLL set. SPACY_MAP above is a
-    starting point for spaCy; Stanza already emits PER/ORG/LOC/MISC.
-
-    Tip: with spaCy, build a Doc from the given words so tokenisation matches:
-        from spacy.tokens import Doc
+    import spacy
+    from spacy.tokens import Doc
+    nlp = spacy.load("en_core_web_sm")
+    all_preds = []
+    for tokens in test_sents_tokens:
         doc = Doc(nlp.vocab, words=list(tokens))
-        # then run the tok2vec + ner pipes on doc
-    """
-    raise NotImplementedError(
-        "System B not implemented yet — see TODO in run_system_b()."
-    )
+        for name, proc in nlp.pipeline:
+            if name in ("tok2vec", "ner"):
+                doc = proc(doc)
+        tags = ["O"] * len(tokens)
+        for ent in doc.ents:
+            coarse = SPACY_MAP.get(ent.label_)
+            if coarse is None:
+                continue
+            for j, tok_idx in enumerate(range(ent.start, ent.end)):
+                prefix = "B" if j == 0 else "I"
+                tags[tok_idx] = f"{prefix}-{coarse}"
+        all_preds.append(tags)
+    return all_preds
 
 
 # --------------------------------------------------------------------------- #
