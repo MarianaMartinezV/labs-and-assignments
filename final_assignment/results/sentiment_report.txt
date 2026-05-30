@@ -1,0 +1,106 @@
+SENTIMENT ANALYSIS
+==================
+Task: sentence-level sentiment classification on Sentiment-topic-test.tsv.
+Labels: negative, neutral, positive.
+
+Final test data statistics:
+- Sentences: 10
+- Label distribution: {'positive': 4, 'negative': 3, 'neutral': 3}
+- Topic distribution: {'movie': 5, 'restaurant': 3, 'book': 2}
+
+Training data for System B:
+- Dataset: Stanford Sentiment Treebank 5-class version via SetFit/sst5 (https://huggingface.co/datasets/SetFit/sst5).
+- Label mapping: very negative + negative -> negative; neutral -> neutral; positive + very positive -> positive.
+- Mapping reference: https://docs.allennlp.org/models/main/models/classification/dataset_readers/stanford_sentiment_tree_bank/
+- Split sizes: train=8544, validation=1101, test=2210.
+- Collapsed train label distribution: {'positive': 3610, 'negative': 3310, 'neutral': 1624}
+- Collapsed validation label distribution: {'positive': 444, 'negative': 428, 'neutral': 229}
+
+System A: VADER, the rule-based sentiment system used in Lab 3.
+System B: BoW + Logistic Regression trained on SST-5. Features are word unigrams and bigrams from CountVectorizer(min_df=1, ngram_range=(1, 2)); the classifier uses LogisticRegression(max_iter=2000, class_weight='balanced').
+System C: pretrained transformer (cardiffnlp/twitter-roberta-base-sentiment-latest), loaded through the Hugging Face pipeline as in the transformer lab.
+Neither System B nor System C is trained on the final test set.
+
+=== System A: VADER ===
+              precision    recall  f1-score   support
+
+    negative       1.00      0.33      0.50         3
+     neutral       1.00      0.33      0.50         3
+    positive       0.50      1.00      0.67         4
+
+    accuracy                           0.60        10
+   macro avg       0.83      0.56      0.56        10
+weighted avg       0.80      0.60      0.57        10
+
+=== System B: BoW + Logistic Regression (SST-5 validation) ===
+              precision    recall  f1-score   support
+
+    negative       0.64      0.67      0.66       428
+     neutral       0.32      0.21      0.25       229
+    positive       0.67      0.76      0.71       444
+
+    accuracy                           0.61      1101
+   macro avg       0.54      0.55      0.54      1101
+weighted avg       0.59      0.61      0.60      1101
+
+=== System B: BoW + Logistic Regression (final test) ===
+              precision    recall  f1-score   support
+
+    negative       0.33      0.67      0.44         3
+     neutral       0.00      0.00      0.00         3
+    positive       0.75      0.75      0.75         4
+
+    accuracy                           0.50        10
+   macro avg       0.36      0.47      0.40        10
+weighted avg       0.40      0.50      0.43        10
+
+=== System C: Pretrained transformer (cardiffnlp/twitter-roberta-base-sentiment-latest) ===
+              precision    recall  f1-score   support
+
+    negative       1.00      1.00      1.00         3
+     neutral       1.00      1.00      1.00         3
+    positive       1.00      1.00      1.00         4
+
+    accuracy                           1.00        10
+   macro avg       1.00      1.00      1.00        10
+weighted avg       1.00      1.00      1.00        10
+
+VADER errors: 4 / 10
+gold=negative pred=positive | This Italian place is really trendy but they have forgotten about the most important part of a resta
+gold=neutral pred=positive | The story of this movie is focused on Carl Brashear played by Cuba Gooding Jr. who wants to be the f
+gold=neutral pred=positive | Chris O'Donnell stated that while filming for this movie, he felt like he was in a toy commercial.
+gold=negative pred=positive | I always have loved English novels, but I just couldn't get into this one.
+
+BoW + Logistic Regression errors: 5 / 10
+gold=positive pred=negative | In conclusion, my review of this book would be: I like Jane Austen and understand why she is famous.
+gold=neutral pred=negative | The story of this movie is focused on Carl Brashear played by Cuba Gooding Jr. who wants to be the f
+gold=neutral pred=negative | Chris O'Donnell stated that while filming for this movie, he felt like he was in a toy commercial.
+gold=neutral pred=negative | The new movie by Mr. Kruno was shot in New York, but the story takes place in Los Angeles.
+gold=negative pred=positive | I always have loved English novels, but I just couldn't get into this one.
+
+Transformer errors: 0 / 10
+No errors on this small test set. Because the score is perfect, the result still needs qualitative analysis: the model may be using sentiment-bearing words such as disaster, love, favorite, excellently, and couldn't get into this one, but confidence alone does not prove that it handles contrast, topic neutrality, or domain context for the right reasons.
+
+VADER-transformer disagreements: 4 / 10
+gold=negative vader=positive transformer=negative score=0.5751 | This Italian place is really trendy but they have forgotten about the most important part of a resta
+gold=neutral vader=positive transformer=neutral score=0.8594 | The story of this movie is focused on Carl Brashear played by Cuba Gooding Jr. who wants to be the f
+gold=neutral vader=positive transformer=neutral score=0.8209 | Chris O'Donnell stated that while filming for this movie, he felt like he was in a toy commercial.
+gold=negative vader=positive transformer=negative score=0.6265 | I always have loved English novels, but I just couldn't get into this one.
+
+Any-system disagreements: 6 / 10
+gold=negative vader=positive bow=negative transformer=negative | This Italian place is really trendy but they have forgotten about the most important part of a resta
+gold=positive vader=positive bow=negative transformer=positive | In conclusion, my review of this book would be: I like Jane Austen and understand why she is famous.
+gold=neutral vader=positive bow=negative transformer=neutral | The story of this movie is focused on Carl Brashear played by Cuba Gooding Jr. who wants to be the f
+gold=neutral vader=positive bow=negative transformer=neutral | Chris O'Donnell stated that while filming for this movie, he felt like he was in a toy commercial.
+gold=neutral vader=neutral bow=negative transformer=neutral | The new movie by Mr. Kruno was shot in New York, but the story takes place in Los Angeles.
+gold=negative vader=positive bow=positive transformer=negative | I always have loved English novels, but I just couldn't get into this one.
+
+Lowest BoW + Logistic Regression confidence predictions:
+gold=neutral bow=negative score=0.3919 | Chris O'Donnell stated that while filming for this movie, he felt like he was in a toy commercial.
+gold=negative bow=negative score=0.4809 | This Italian place is really trendy but they have forgotten about the most important part of a resta
+gold=positive bow=positive score=0.5175 | My husband and I moved to Amsterdam 6 years ago and for as long as we have lived here, Blauwbrug has
+
+Lowest transformer confidence predictions:
+gold=negative transformer=negative score=0.5751 | This Italian place is really trendy but they have forgotten about the most important part of a resta
+gold=negative transformer=negative score=0.6265 | I always have loved English novels, but I just couldn't get into this one.
+gold=neutral transformer=neutral score=0.8209 | Chris O'Donnell stated that while filming for this movie, he felt like he was in a toy commercial.
