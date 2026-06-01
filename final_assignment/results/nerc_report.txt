@@ -42,9 +42,32 @@ weighted avg      0.962     0.963     0.961       214
 'Maggie': gold=I-PER pred=B-PER
 'Mr.': gold=B-PER pred=O
 
-System B skipped: System B not implemented yet — see TODO in run_system_b().
+======================================================================
+System B — BERT NER (dslim/bert-base-NER, fine-tuned on CoNLL-2003)
+======================================================================
+Span-level F1 (seqeval): 0.824
+
+--- Span-level (entity) report ---
+              precision    recall  f1-score   support
+
+         LOC      0.800     1.000     0.889         4
+        MISC      1.000     1.000     1.000         3
+         ORG      1.000     0.750     0.857         4
+         PER      0.667     0.667     0.667         6
+
+   micro avg      0.824     0.824     0.824        17
+   macro avg      0.867     0.854     0.853        17
+weighted avg      0.835     0.824     0.823        17
+
+--- Token-level errors (5) ---
+'Blauwbrug': gold=B-ORG pred=B-LOC
+'Dame': gold=B-PER pred=O
+'Maggie': gold=I-PER pred=B-PER
+'Mr.': gold=B-PER pred=O
+'Kruno': gold=I-PER pred=B-PER
 
 ======================================================================
 SUMMARY
 ======================================================================
 System A span-F1: 0.513 (8 token errors)
+System B span-F1: 0.824 (5 token errors)

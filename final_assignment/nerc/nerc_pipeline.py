@@ -124,35 +124,45 @@ def run_system_a(train_sents, test_sents_wp):
 
 
 # --------------------------------------------------------------------------- #
-# System B: spaCy pretrained NER, mapped to CoNLL tags
+# System B: dslim/bert-base-NER — BERT fine-tuned on CoNLL-2003
 # --------------------------------------------------------------------------- #
-SPACY_MAP = {
-    "PERSON": "PER",
-    "ORG": "ORG",
-    "GPE": "LOC", "LOC": "LOC", "FAC": "LOC",
-    "NORP": "MISC", "LANGUAGE": "MISC", "EVENT": "MISC",
-    "WORK_OF_ART": "MISC", "PRODUCT": "MISC", "LAW": "MISC",
-}
-
+# Label set already matches CoNLL-2003 (B-PER, I-ORG, B-LOC, B-MISC, etc.)
+# Subword tokens are handled by grouping via character-offset alignment.
 
 def run_system_b(test_sents_tokens):
-    import spacy
-    from spacy.tokens import Doc
-    nlp = spacy.load("en_core_web_sm")
+    from transformers import pipeline as hf_pipeline
+    ner = hf_pipeline(
+        "ner",
+        model="dslim/bert-base-NER",
+        aggregation_strategy="first",  # keeps first subword label per word group
+        device=-1,
+    )
     all_preds = []
     for tokens in test_sents_tokens:
-        doc = Doc(nlp.vocab, words=list(tokens))
-        for name, proc in nlp.pipeline:
-            if name in ("tok2vec", "ner"):
-                doc = proc(doc)
+        # build sentence text and record each token's char start offset
+        char_starts = []
+        pos = 0
+        parts = []
+        for tok in tokens:
+            char_starts.append(pos)
+            parts.append(tok)
+            pos += len(tok) + 1  # +1 for space
+        sentence = " ".join(parts)
+
+        results = ner(sentence)
+
+        # map entity spans back to original token indices by char start
         tags = ["O"] * len(tokens)
-        for ent in doc.ents:
-            coarse = SPACY_MAP.get(ent.label_)
-            if coarse is None:
-                continue
-            for j, tok_idx in enumerate(range(ent.start, ent.end)):
-                prefix = "B" if j == 0 else "I"
-                tags[tok_idx] = f"{prefix}-{coarse}"
+        for ent in results:
+            label = ent["entity_group"]   # e.g. "PER", "ORG", "LOC", "MISC"
+            e_start = ent["start"]
+            e_end = ent["end"]
+            first = True
+            for idx, cs in enumerate(char_starts):
+                tok_end = cs + len(tokens[idx])
+                if cs >= e_start and cs < e_end:
+                    tags[idx] = ("B-" if first else "I-") + label
+                    first = False
         all_preds.append(tags)
     return all_preds
 
@@ -214,7 +224,7 @@ def main():
     print("Running System B (pretrained NER) ...")
     try:
         preds_b = run_system_b(tokens_seqs)
-        rep_b, f1_b, err_b = evaluate("System B — pretrained NER",
+        rep_b, f1_b, err_b = evaluate("System B — BERT NER (dslim/bert-base-NER, fine-tuned CoNLL-2003)",
                                       gold_seqs, preds_b, tokens_seqs)
     except NotImplementedError as e:
         preds_b, rep_b, f1_b, err_b = None, f"System B skipped: {e}\n", None, None
